@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "brand": "Tesla",
+    "model": "Model S",
+    "price": 79999,
+    "year": 2022,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/2014_Tesla_Model_S_in_Germany.jpg",
+    "description": "Електричний седан, відомий своєю високою продуктивністю та сучасними технологіями."
+  },
+  {
+    "id": 2,
+    "brand": "BMW",
+    "model": "i8",
+    "price": 145000,
+    "year": 2021,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/2016_BMW_i8.jpg",
+    "description": "Гібридний спорткар, який поєднує елегантний дизайн та інноваційні технології."
+  },
+  {
+    "id": 3,
+    "brand": "Audi",
+    "model": "e-tron",
+    "price": 89000,
+    "year": 2023,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Audi_e-tron%2C_Paris_Motor_Show_2018%2C_IMG_0442.jpg",
+    "description": "Електричний кросовер, що пропонує просторий інтер'єр і сучасні функції."
+  },
+  {
+    "id": 4,
+    "brand": "Mercedes-Benz",
+    "model": "EQC",
+    "price": 70000,
+    "year": 2022,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Mercedes-Benz_EQC_400_4MATIC_AMG_Line_%28N_293%29_%E2%80%93_f_02042021.jpg",
+    "description": "Електричний SUV, що відрізняється розкішшю та комфортом."
+  },
+  {
+    "id": 5,
+    "brand": "Ford",
+    "model": "Mustang Mach-E",
+    "price": 43000,
+    "year": 2021,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/2021_Ford_Mustang_Mach-E_Standard_Range_Front.jpg",
+    "description": "Електричний кросовер, що поєднує спортивний характер Mustang з сучасними технологіями."
+  },
+  {
+    "id": 6,
+    "brand": "Porsche",
+    "model": "Taycan",
+    "price": 185000,
+    "year": 2023,
+    "photo_url": "https://nextcar.ua/images/thumbnails/800/450/detailed/572/1_ptsr-4p.jpg.jpg",
+    "description": "Електричний спорткар з вражаючою продуктивністю та розкішним дизайном."
+  },
+  {
+    "id": 7,
+    "brand": "Nissan",
+    "model": "Leaf",
+    "price": 32000,
+    "year": 2022,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/2019_Nissan_Leaf_N-Connecta.jpg/800px-2019_Nissan_Leaf_N-Connecta.jpg",
+    "description": "Компактний електромобіль, ідеальний для щоденних поїздок."
+  },
+  {
+    "id": 8,
+    "brand": "Chevrolet",
+    "model": "Bolt EV",
+    "price": 37000,
+    "year": 2023,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/2019_Chevrolet_Bolt_EV_-_April_2019_%282777%29.jpg",
+    "description": "Доступний електромобіль з великим запасом ходу та просторим салоном."
+  }
+]
