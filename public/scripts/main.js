@@ -7,7 +7,7 @@ fetch('./data.json')
         updateTotalPrice(cars);
 
         // Search functionality
-        const searchInput = document.getElementById('searchInput');
+        const searchInput = document.querySelector('input[type="search"]');
         searchInput.addEventListener('input', function() {
             filterCars();
         });
@@ -29,64 +29,26 @@ fetch('./data.json')
         });
 
         // Sort by brand
-        const sortBrandBtn = document.createElement('button');
-        sortBrandBtn.textContent = 'Sort by Brand';
-        sortBrandBtn.classList.add('btn', 'btn-success', 'me-2');
-        document.querySelector('.row.mb-3 .col-md-12').appendChild(sortBrandBtn);
+        const sortBrandBtn = document.getElementById('sortBrandBtn');
         sortBrandBtn.addEventListener('click', function() {
             cars.sort((a, b) => a.brand.localeCompare(b.brand));
             displayCars(cars);
             updateTotalPrice(cars);
         });
 
-        // Sort by model
-        const sortModelBtn = document.createElement('button');
-        sortModelBtn.textContent = 'Sort by Model';
-        sortModelBtn.classList.add('btn', 'btn-warning');
-        document.querySelector('.row.mb-3 .col-md-12').appendChild(sortModelBtn);
-        sortModelBtn.addEventListener('click', function() {
-            cars.sort((a, b) => a.model.localeCompare(b.model));
-            displayCars(cars);
-            updateTotalPrice(cars);
-        });
-
-        // Price range filter
-        const minPriceInput = document.createElement('input');
-        minPriceInput.type = 'number';
-        minPriceInput.placeholder = 'Min Price';
-        minPriceInput.classList.add('form-control', 'me-2', 'mb-2');
-
-        const maxPriceInput = document.createElement('input');
-        maxPriceInput.type = 'number';
-        maxPriceInput.placeholder = 'Max Price';
-        maxPriceInput.classList.add('form-control', 'me-2', 'mb-2');
-
-        document.querySelector('.row.mb-3 .col-md-12').append(minPriceInput, maxPriceInput);
+        // Filter by price and year
+        const minPriceInput = document.querySelector('input[placeholder="Min Price"]');
+        const maxPriceInput = document.querySelector('input[placeholder="Max Price"]');
+        const minYearInput = document.querySelector('input[placeholder="Min Year"]');
+        const maxYearInput = document.querySelector('input[placeholder="Max Year"]');
 
         minPriceInput.addEventListener('input', filterCars);
         maxPriceInput.addEventListener('input', filterCars);
-
-        // Year range filter
-        const minYearInput = document.createElement('input');
-        minYearInput.type = 'number';
-        minYearInput.placeholder = 'Min Year';
-        minYearInput.classList.add('form-control', 'me-2', 'mb-2');
-
-        const maxYearInput = document.createElement('input');
-        maxYearInput.type = 'number';
-        maxYearInput.placeholder = 'Max Year';
-        maxYearInput.classList.add('form-control', 'me-2', 'mb-2');
-
-        document.querySelector('.row.mb-3 .col-md-12').append(minYearInput, maxYearInput);
-
         minYearInput.addEventListener('input', filterCars);
         maxYearInput.addEventListener('input', filterCars);
 
-        // Reset filters button
-        const resetFiltersBtn = document.createElement('button');
-        resetFiltersBtn.textContent = 'Reset Filters';
-        resetFiltersBtn.classList.add('btn', 'btn-danger', 'mb-2');
-        document.querySelector('.row.mb-3 .col-md-12').appendChild(resetFiltersBtn);
+        // Reset filters
+        const resetFiltersBtn = document.querySelector('.btn-danger');
         resetFiltersBtn.addEventListener('click', function() {
             minPriceInput.value = '';
             maxPriceInput.value = '';
@@ -131,6 +93,10 @@ function displayCars(cars) {
                     <p class="card-text">Price: $${car.price}</p>
                     <p class="card-text">Year: ${car.year}</p>
                     <p class="card-text">${car.description}</p>
+                    <div class="card-buttons">
+                        <a href="edit.html?id=${car.id}" class="btn btn-warning">Edit</a>
+                        <button class="btn btn-danger" onclick="removeCar(${car.id})">Remove</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -141,7 +107,14 @@ function displayCars(cars) {
 
 // Function to update total price
 function updateTotalPrice(cars) {
-    const totalPriceElement = document.getElementById('total-price');
+    const totalPriceElement = document.getElementById('totalPrice');
     const totalPrice = cars.reduce((total, car) => total + car.price, 0);
-    totalPriceElement.textContent = `Total Price of Cars: $${totalPrice}`;
+    totalPriceElement.textContent = `$${totalPrice}`;
+}
+
+// Function to remove a car (for example purposes, does not affect JSON data)
+function removeCar(carId) {
+    // Placeholder function for removing a car from the UI
+    alert(`Car with ID: ${carId} removed!`);
+    // Here, you would implement the actual logic to remove the car from your data source
 }

@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrap {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-title {
+    margin-bottom: 100px;;
+}
+
+/* Загальні стилі */
+body {
+    /*padding-top: 80px;*/
+}
+
+.main-container {
+    padding: 20px;
+}
+
+/* Картки машин */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-buttons a, .card-buttons button {
+    margin-right: 10px;
+}
+
+/* Форма */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Кнопка для підрахунку ціни */
+.count-button {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.count-button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Заголовки */
+h1, h5 {
+    color: #007bff;
+}
+
