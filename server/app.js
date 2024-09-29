@@ -2,16 +2,19 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const dotenv = require('dotenv');
+const cors = require('cors');
 
 dotenv.config();
 
 const app = express();
+app.use(cors());
 const PORT = process.env.PORT || 7000;
 const MONGO_URI = process.env.MONGO_URI;
 
 mongoose.connect(MONGO_URI)
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.log(err));
+
 
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.json());
