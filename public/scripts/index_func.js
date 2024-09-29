@@ -71,7 +71,6 @@ let drawCards = (data) => {
         </div>
         `);
 
-        // Додаємо обробники подій для кнопок редагування та видалення
         let editButton = document.getElementById(`edit-car-${car._id}`);
         editButton.addEventListener("click", (e) => {
             let link = document.createElement("a");

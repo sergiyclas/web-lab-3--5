@@ -36,9 +36,8 @@ let createCar = (data) => {
         body: JSON.stringify(data)
     })
         .then(res => {
-            // Перевіряємо статус відповіді
             if (res.status === 200 || res.status === 201) {
-                return res.json(); // Перетворюємо відповідь у JSON
+                return res.json();
             } else {
                 return res.json().then(data => {
                     throw new Error(data.message || "Помилка при обробці запиту");
@@ -82,7 +81,7 @@ let updateCar = (data, id) => {
 };
 
 
-let validateForm = ({ brand, model, price, year, imageUrl }) => {
+let validateForm = ({brand, model, price, year, imageUrl}) => {
     let errors = [];
 
     if (!brand || brand.trim().length === 0) {

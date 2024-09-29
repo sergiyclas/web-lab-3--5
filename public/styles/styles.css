@@ -15,7 +15,6 @@
     margin-bottom: 100px;;
 }
 
-/* Загальні стилі */
 body {
     /*padding-top: 80px;*/
 }
@@ -24,7 +23,6 @@ body {
     padding: 20px;
 }
 
-/* Картки машин */
 .card {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -39,13 +37,11 @@ body {
     margin-right: 10px;
 }
 
-/* Форма */
 form {
     max-width: 600px;
     margin: 0 auto;
 }
 
-/* Кнопка для підрахунку ціни */
 .count-button {
     background-color: #f0f0f0;
     border: 1px solid #ddd;
@@ -58,7 +54,6 @@ form {
     background-color: #e0e0e0;
 }
 
-/* Заголовки */
 h1, h5 {
     color: #007bff;
 }

@@ -1,7 +1,5 @@
-// controllers/carController.js
 const Car = require('../models/Car');
 
-// GET /api/cars - отримати всі машини
 const getCars = async (req, res) => {
     try {
         const cars = await Car.find();
@@ -11,7 +9,6 @@ const getCars = async (req, res) => {
     }
 };
 
-// GET /api/cars/:id - отримати машину за ID
 const getCarById = async (req, res) => {
     try {
         const car = await Car.findById(req.params.id);
@@ -24,7 +21,6 @@ const getCarById = async (req, res) => {
     }
 };
 
-// POST /api/cars - створити нову машину
 const createCar = async (req, res) => {
     const { brand, model, year, price, imageUrl } = req.body;
 
@@ -42,7 +38,6 @@ const createCar = async (req, res) => {
 };
 
 
-// PUT /api/cars/:id - оновити машину за ID
 const updateCar = async (req, res) => {
     const { brand, model, year, price, imageUrl } = req.body;
 
@@ -61,7 +56,6 @@ const updateCar = async (req, res) => {
     }
 };
 
-// DELETE /api/cars/:id - видалити машину за ID
 const deleteCar = async (req, res) => {
     try {
         const deletedCar = await Car.findByIdAndDelete(req.params.id);
